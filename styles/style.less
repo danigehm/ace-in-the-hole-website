@@ -1,0 +1,199 @@
+/*
+
+File Name: style.less
+Date: 02/20/17
+Programmer: Dani Gehm
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+/* MOBILE STYLESHEET */
+
+ body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.75em;
+    color: @darkColor;
+     
+     strong {
+         font-weight: bold;
+         color: @darkColor;
+     }
+     
+     p {
+        .paragraphFontAttributes(@darkColor; 'Roboto', sans-serif; 1em;)
+     }
+     
+     h1 {
+         .headingFontAttributes(@darkColor; 1.5em; 'Oswald', sans-serif; left; uppercase;);
+         z-index: 99999999;
+         padding-left: 0.5em;
+         margin-bottom: 0.25em;
+         display: block;
+         position: absolute;
+         top: 0.65em;
+         width: 100%;
+        }
+     
+     h2 {
+         .headingFontAttributes(@color1; 1.25em; 'Oswald', sans-serif; center; uppercase;);
+         margin: 0 2em 1.5em 2em;
+         padding-bottom: 0.5em;
+         border-bottom: 8px solid red;
+     }
+     
+     h3 {
+         .headingFontAttributes(@color1; 1.25em; 'Oswald', sans-serif; center; none;);
+         margin: 0 2em 1.5em 2em;
+         padding-bottom: 0.5em;
+         border-bottom: 8px solid @color1;
+     }
+     
+     h4 {
+         .headingFontAttributes(@darkColor; 1em; 'Roboto', sans-serif; center; none;);
+     }
+     
+     a {
+         text-decoration: none;
+         color: @darkColor;
+     }
+     
+     button {
+         background-color: @color1;
+         color: @lightColor;
+         border: 0px;
+         padding: 0.75em 2em;
+         margin-top: 0.75em;
+         border-radius: 15px;
+         margin: 0 auto;
+         display: block;
+         
+         a {
+             color: @lightColor;
+             text-decoration: none;
+             text-transform: uppercase;
+             font-weight: bold;
+         }
+     }
+  
+    
+    header {
+        
+        // MAIN HERO IMAGE SECTIONS
+        
+        .introindex {
+            .heroLargeImage('http://via.placeholder.com/800x600');
+        }
+     }
+     
+     main {
+         
+         padding: 2em 1.5em;
+         
+         p {
+            margin-bottom: 1em;
+            }
+     }
+     
+     
+     footer { 
+         background-color: @color2;
+         color: @lightColor;
+         padding: 1em 2em;
+         text-align: center;
+         font-weight: bold;
+         font-size: 0.85em;
+         
+         h4 {
+             .headingFontAttributes(@lightColor; 1.5em; 'Oswald', sans-serif; center; none;);
+             margin-bottom: 0.5em;
+             margin-top: 0.5em;
+         }
+         
+         .social {
+            margin-top: 1em;
+             
+             li {
+                 display:inline;
+                 &:not(:last-child) {
+                     padding-right: 1em;
+                 }
+             }
+             
+             img {
+                 max-height: 20px;
+                 max-width: 20px;
+             }
+         }
+     }
+    
+/* TABLET STYLESHEET */
+     
+@media only screen 
+  and (min-device-width: 768px) {
+      
+      .imgfloatright {
+         float: right;
+         text-align: right;
+         width: 50%;
+         padding-left: 0.5em;
+          padding-bottom: 1em;
+     }
+      
+      h3 {
+          clear: both;
+      }
+      
+      header {
+        
+        .intro {
+            .heroLargeImage('../images/intro.jpg');
+            padding: 20vh 0em 0em 4em;
+            
+            
+            p {
+                font-size: 1.25em;
+                margin-bottom: 0.75em;
+            }
+            
+            h2 {
+                font-size: 3em;
+            }
+            
+        }
+     }
+      
+      main {
+          
+          .collection, .about, .newsletter, .instagram {
+              padding: 2em 5em;
+          }
+          
+          .newsletter {
+              
+              button {
+                  padding: 1em 4em;
+              }
+              
+              input, select {
+                  width: 60%;
+              }
+          }
+          
+          .email_form {
+              text-align: center;
+          }
+      }
+       
+
+}
+
+/* DESKTOP STYLESHEET */
+
+@media screen and (min-width: 1025px) {}
+    }

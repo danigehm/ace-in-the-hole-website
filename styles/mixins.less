@@ -1,0 +1,54 @@
+// out: null
+
+/*
+
+File Name: mixins.less
+Date: 11/17/16
+Programmer: Dani Gehm
+
+*/
+
+/* PARAMETRIC MIXINS FOR FONT ATTRIBUTES */
+
+.headingFontAttributes(@fontColor; @fontSize: 1.25em; @fontFamily: 'Patua One', cursive; @alignment: center; @textCase: uppercase;) {
+    color: @fontColor;
+    font-size: @fontSize;
+    font-family: @fontFamily;
+    font-weight: bold;
+    text-transform: @textCase;
+    text-align: @alignment;
+    position: relative;
+    z-index: 1;
+}
+
+.heroLargeImage(@heroImageURL) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40vh;
+    width: 100%;
+    background: url(@heroImageURL);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paragraphFontAttributes(@fontColor; @fontFamily; @fontSize;) {
+    color: @fontColor;
+    font-family: @fontFamily;
+    font-size: @fontSize;
+    line-height: @fontSize * 1.5;
+    font-weight: normal;
+}
+
+.vertical-align (@position: relative) {
+  position: @position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.text-shadow (@string: 0 2px 3px rgba(0, 0, 0, 0.5)) {
+	text-shadow: @string;
+}
